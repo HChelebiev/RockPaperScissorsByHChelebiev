@@ -1,5 +1,10 @@
 import random
 
+
+def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+
+def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
+
 rock = 'Rock'
 paper = 'Paper'
 scissors = 'Scissors'
@@ -31,8 +36,8 @@ print(f"Computer move is: {computer_move}")
 if (player_move == rock and computer_move == scissors) or \
         (player_move == paper and computer_move == rock) or \
         (player_move == scissors and computer_move == paper):
-    print("You win!")
+    prGreen("You win!")
 elif player_move == computer_move:
     print("Draw!")
 else:
-    print("You lose!")
+    prRed("You lose!")
